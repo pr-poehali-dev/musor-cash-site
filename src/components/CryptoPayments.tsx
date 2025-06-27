@@ -2,6 +2,22 @@ import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 
 const CryptoPayments = () => {
+  const handleDeposit = () => {
+    alert("Депозит в разработке");
+  };
+
+  const handleWithdraw = () => {
+    alert("Вывод в разработке");
+  };
+
+  const handleQRDeposit = () => {
+    alert("QR депозит в разработке");
+  };
+
+  const handleFastWithdraw = () => {
+    alert("Быстрый вывод в разработке");
+  };
+
   const cryptos = [
     { name: "Bitcoin", symbol: "BTC", icon: "₿", fee: "0.1%", time: "5 мин" },
     { name: "Ethereum", symbol: "ETH", icon: "Ξ", fee: "0.05%", time: "2 мин" },
@@ -58,7 +74,10 @@ const CryptoPayments = () => {
               ))}
             </div>
 
-            <Button className="w-full bg-green-600 hover:bg-green-700 neon-glow">
+            <Button
+              className="w-full bg-green-600 hover:bg-green-700 neon-glow"
+              onClick={handleDeposit}
+            >
               <Icon name="Plus" size={20} className="mr-2" />
               Пополнить баланс
             </Button>
@@ -95,7 +114,10 @@ const CryptoPayments = () => {
               </div>
             </div>
 
-            <Button className="w-full bg-orange-600 hover:bg-orange-700 neon-glow">
+            <Button
+              className="w-full bg-orange-600 hover:bg-orange-700 neon-glow"
+              onClick={handleWithdraw}
+            >
               <Icon name="Minus" size={20} className="mr-2" />
               Вывести средства
             </Button>
@@ -109,6 +131,7 @@ const CryptoPayments = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
+              onClick={handleQRDeposit}
               className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 neon-glow"
             >
               <Icon name="QrCode" size={20} className="mr-2" />
@@ -116,6 +139,7 @@ const CryptoPayments = () => {
             </Button>
             <Button
               size="lg"
+              onClick={handleFastWithdraw}
               className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 neon-glow"
             >
               <Icon name="Zap" size={20} className="mr-2" />
