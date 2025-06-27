@@ -2,10 +2,6 @@ import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 
 const Hero = () => {
-  const handleStartPlaying = () => {
-    alert("Добро пожаловать в MUSOR.CASH! Выберите игру в разделе ниже.");
-  };
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-cyan-900/20"></div>
@@ -61,7 +57,6 @@ const Hero = () => {
         <div className="space-y-4">
           <Button
             size="lg"
-            onClick={handleStartPlaying}
             className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-xl px-8 py-4 neon-glow"
           >
             <Icon name="Rocket" size={24} className="mr-2" />

@@ -2,14 +2,6 @@ import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 
 const GamesPreview = () => {
-  const handlePlayGame = (gameName: string) => {
-    alert(`Запуск игры: ${gameName}`);
-  };
-
-  const handleAllGames = () => {
-    alert("Полный каталог игр в разработке");
-  };
-
   const games = [
     {
       id: 1,
@@ -85,7 +77,6 @@ const GamesPreview = () => {
                   </span>
                   <Button
                     size="sm"
-                    onClick={() => handlePlayGame(game.name)}
                     className="bg-purple-600 hover:bg-purple-700 group-hover:neon-glow"
                   >
                     Играть
@@ -100,7 +91,6 @@ const GamesPreview = () => {
           <Button
             size="lg"
             variant="outline"
-            onClick={handleAllGames}
             className="neon-border text-purple-300 hover:bg-purple-500/20"
           >
             <Icon name="Gamepad2" size={20} className="mr-2" />
